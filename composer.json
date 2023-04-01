@@ -16,6 +16,7 @@
     ],
     "require": {
         "php": "^8.1",
+        "artesaos/seotools": "^1.1",
         "htmlmin/htmlmin": "dev-master#347d577",
         "illuminate/contracts": "^10.0",
         "spatie/laravel-package-tools": "^1.14.0"
