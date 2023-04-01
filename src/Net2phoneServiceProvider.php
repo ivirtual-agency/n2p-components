@@ -21,6 +21,10 @@ class Net2phoneServiceProvider extends PackageServiceProvider
             ->hasConfigFile()
             ->hasViews()
             ->hasAssets()
+            ->hasViewComposer('*', fn ($view) => $view->with(
+                'internationalSites',
+                Net2phone::getInternationalWebsites()
+            ))
             ->hasInstallCommand(function (InstallCommand $command) {
                 $command->publishAssets();
             });
