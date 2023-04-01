@@ -2,7 +2,7 @@
 
 <div {{ $attributes
     ->except('color')
-    ->merge(['class' => 'flex justify-center md:justify-start space-x-6 md:order-1'])
+    ->merge(['class' => 'flex justify-center md:justify-start space-x-6'])
 }}>
 
     @if (config('net2phone.social.linkedin_url'))
