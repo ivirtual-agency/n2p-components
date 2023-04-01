@@ -24,9 +24,11 @@
                 </div>
             @endif
 
-            <nav class="hidden md:space-x-4 lg:space-x-5 md:flex" x-data="Components.popoverGroup()" x-init="init()">
-                {{ $menu }}
-            </nav>
+            @isset($menu)
+                <nav class="hidden md:space-x-4 lg:space-x-5 md:flex" x-data="Components.popoverGroup()" x-init="init()">
+                    {{ $menu }}
+                </nav>
+            @endisset
 
             @isset($rightMenu)
             <div class="hidden items-center justify-end md:flex md:flex-1 lg:w-0 space-x-3">
