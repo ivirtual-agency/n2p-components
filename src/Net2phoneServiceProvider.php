@@ -2,6 +2,7 @@
 
 namespace iVirtual\Net2phone;
 
+use BladeUI\Icons\Factory;
 use Illuminate\Support\Facades\Blade;
 use Spatie\LaravelPackageTools\Commands\InstallCommand;
 use Spatie\LaravelPackageTools\Package;
@@ -29,6 +30,19 @@ class Net2phoneServiceProvider extends PackageServiceProvider
             ->hasInstallCommand(function (InstallCommand $command) {
                 $command->publishAssets();
             });
+    }
+
+    /**
+     * The package has been registered.
+     */
+    public function packageRegistered(): void
+    {
+        $this->callAfterResolving(Factory::class, function (Factory $factory) {
+            $factory->add(
+                'n2p',
+                array_merge(['path' => __DIR__ . '/../resources/svg'], ['prefix' => 'n2p'])
+            );
+        });
     }
 
     /**
