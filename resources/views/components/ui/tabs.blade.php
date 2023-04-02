@@ -10,7 +10,7 @@
                     '{{ $dark ? 'text-white' : 'text-black' }} border-primary': selected === {{ $i }}, 
                     '{{ $dark ? 'border-gray-400 text-gray-400' : 'border-gray-100 text-gray-500' }}': selected !== {{ $i }}
                 }">
-                <span>{{ ${'item_' . $i}->attributes->get('title') }}</span>
+                <span>{{ ${'item_' . $i}->attributes->get('menu') }}</span>
             </button>
         @endfor
     </div>
@@ -23,7 +23,7 @@
             <div class="w-full block sm:hidden">
                 <button type="button" @click="selected = (selected === {{ $i }} ? null : {{ $i }})"
                     class="w-full flex justify-between items-center px-4 py-2 bg-gray-100">
-                    <p>{{ ${'item_' . $i}->attributes->get('title') }}</p>
+                    <p>{{ ${'item_' . $i}->attributes->get('menu') }}</p>
                     <span x-show="selected !== {{ $i }}">
                         @svg('entypo-plus', 'w-8 h-8')
                     </span>
@@ -41,15 +41,31 @@
                 x-transition:enter-end="opacity-100 translate-y-0">
 
                 @if (${'item_' . $i}->attributes->get('image'))
+
+                    @php
+                        $itemTitle = ${'item_' . $i}->attributes->get('menu');
+
+                        if (${'item_' . $i}->attributes->get('title')) {
+                            $itemTitle .= ' - ' . ${'item_' . $i}->attributes->get('title');
+                        } 
+                    @endphp
+
                     {{-- With Image --}}
                     <div class="w-full sm:w-2/5 sm:rounded-lg p-8 flex justify-center items-center">
                         <img src="{{ asset(${'item_' . $i}->attributes->get('image')) }}" 
-                            alt="{{ ${'item_' . $i}->attributes->get('title') }}"
-                            title="{{ ${'item_' . $i}->attributes->get('title') }}"
+                            alt="{{ $itemTitle }}"
+                            title="{{ $itemTitle }}"
                             loading="lazy">
                     </div>
         
                     <div class="w-full sm:w-3/5 text-left flex flex-col justify-center p-8">
+                        
+                        @if (${'item_' . $i}->attributes->get('title'))
+                            <h3 class="mt-4 text-xl font-bold tracking-tight text-black sm:text-2xl md:text-3xl">
+                                {{ ${'item_' . $i}->attributes->get('title') }}
+                            </h3>
+                        @endif
+
                         {{ ${'item_' . $i} }}
                     </div>
                 @else
