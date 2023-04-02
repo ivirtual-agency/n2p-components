@@ -21,12 +21,12 @@
                                 </h2>
                             @endisset
 
-                            <h1 class="mt-4 text-4xl font-bold tracking-tight text-black sm:text-4xl md:text-5xl">
+                            <h1 class="mt-4 text-4xl font-bold tracking-tight sm:text-4xl md:text-5xl">
                                 {{ $title }}
                             </h1>
 
                             @isset($text)
-                                <p class="mt-3 text-base text-gray-500 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl">
+                                <p class="mt-3 text-base sm:mt-5 sm:text-xl lg:text-lg xl:text-xl">
                                     {{ $text }}
                                 </p>
                             @endisset
@@ -57,12 +57,12 @@
                                 </h2>
                             @endisset
 
-                            <h1 class="mt-4 text-4xl font-bold tracking-tight text-black sm:text-4xl md:text-5xl">
+                            <h1 class="mt-4 text-4xl font-bold tracking-tight sm:text-4xl md:text-5xl">
                                 {{ $title }}
                             </h1>
 
                             @isset($text)
-                                <p class="mt-3 text-base text-gray-500 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl">
+                                <p class="mt-3 text-base sm:mt-5 sm:text-xl lg:text-lg xl:text-xl">
                                     {{ $text }}
                                 </p>
                             @endisset
