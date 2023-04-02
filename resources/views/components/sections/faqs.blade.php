@@ -1,4 +1,4 @@
-@props(['faqs' => []])
+@props(['items' => []])
 
 @pushOnce('js')
     <script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/collapse@3.12.0/dist/cdn.min.js"></script>
@@ -9,7 +9,7 @@
     Artesaos\SEOTools\Facades\JsonLdMulti::setType('FAQPage');
     Artesaos\SEOTools\Facades\JsonLdMulti::addValue(
         'mainEntity', 
-        collect($faqs)->map(fn($item) => [
+        collect($items)->map(fn($item) => [
             "@type" => "Question",
             "name" => $item['title'],
             "acceptedAnswer" => [
@@ -28,7 +28,7 @@
 
     <div x-data="{ active: 0 }" class="mt-4 sm:mt-8 mx-auto max-w-3xl w-full min-h-[16rem] space-y-4">
         
-        @foreach ($faqs as $key => $answer)
+        @foreach ($items as $key => $answer)
             <div x-data="{
                 id: {{ $key }},
                 get expanded() {
