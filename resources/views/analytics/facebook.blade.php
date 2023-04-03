@@ -1,4 +1,4 @@
-@if (config('net2phone.facebook_pixel_id'))
+@if (config('net2phone.facebook.pixel_id'))
     <script>
         !function(f,b,e,v,n,t,s)
         {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -9,16 +9,16 @@
         s.parentNode.insertBefore(t,s)}(window, document,'script',
         'https://connect.facebook.net/en_US/fbevents.js');
 
-        fbq('init', '{{ config('net2phone.facebook_pixel_id') }}');
+        fbq('init', '{{ config('net2phone.facebook.pixel_id') }}');
         fbq('track', 'PageView');
     </script>
     
     <noscript>
         <img height="1" width="1" style="display:none" 
-            src="https://www.facebook.com/tr?id={{ config('net2phone.facebook_pixel_id') }}&ev=PageView&noscript=1"/>
+            src="https://www.facebook.com/tr?id={{ config('net2phone.facebook.pixel_id') }}&ev=PageView&noscript=1"/>
     </noscript>
 @endif
 
-@if (config('net2phone.facebook_verification'))
-    <meta name="facebook-domain-verification" content="{{ config('net2phone.facebook_verification') }}" />
+@if (config('net2phone.facebook.verification'))
+    <meta name="facebook-domain-verification" content="{{ config('net2phone.facebook.verification') }}" />
 @endif

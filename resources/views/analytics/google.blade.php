@@ -1,12 +1,12 @@
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-EWQ8HJHTRW"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id={{ config('net2phone.google.global_id') }}"></script>
 
 <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    gtag('config', 'G-EWQ8HJHTRW'); {{-- Google Analytics - All Websites --}}
+    gtag('config', '{{ config('net2phone.google.global_id') }}'); {{-- Google Analytics - All Websites --}}
 
-    @foreach(collect(config('net2phone.google_tracking_ids'))->filter() as $trackingId)
+    @foreach(collect(config('net2phone.google.tracking_ids'))->filter() as $trackingId)
         gtag('config', '{{ $trackingId }}');
     @endforeach
 </script>

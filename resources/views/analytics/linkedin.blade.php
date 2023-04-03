@@ -1,6 +1,6 @@
-@if (config('net2phone.linkedin_pixel_id'))
+@if (config('net2phone.linkedin.pixel_id'))
     <script type="text/javascript">
-        _linkedin_partner_id = "{{ config('net2phone.linkedin_pixel_id') }}"; 
+        _linkedin_partner_id = "{{ config('net2phone.linkedin.pixel_id') }}"; 
         window._linkedin_data_partner_ids = window._linkedin_data_partner_ids || []; 
         window._linkedin_data_partner_ids.push(_linkedin_partner_id); 
     </script>
@@ -11,6 +11,6 @@
     
     <noscript> 
         <img height="1" width="1" style="display:none;" alt=""
-            src="https://px.ads.linkedin.com/collect/?pid={{ config('net2phone.linkedin_pixel_id') }}&fmt=gif" /> 
+            src="https://px.ads.linkedin.com/collect/?pid={{ config('net2phone.linkedin.pixel_id') }}&fmt=gif" /> 
     </noscript>
 @endif

@@ -3,25 +3,48 @@
 return [
     /*
     |--------------------------------------------------------------------------
-    | Analytics (Tracking) variables
+    | Google Tracking variables
     |--------------------------------------------------------------------------
     |
-    | This values will be used for adding tracking scripts.
+    | This values will be used Google Analytics / Google Ads tracking scripts.
     */
 
-    'google_tracking_ids' => explode(',', env('GOOGLE_TRACKING_IDS') ?? ''),
+    'google' => [
 
-    'facebook_pixel_id' => env('FACEBOOK_PIXEL_ID'),
+        'global_id' => env('GOOGLE_GLOBAL_ID', 'G-EWQ8HJHTRW'),
 
-    'linkedin_pixel_id' => env('LINKEDIN_PIXEL_ID'),
+        'tracking_ids' => explode(',', env('GOOGLE_TRACKING_IDS') ?? ''),
+
+        'user_data' => [
+
+            'phone_prefix' => env('GOOGLE_USER_DATA_PHONE_PREFIX'),
+
+            'country' => env('GOOGLE_USER_DATA_COUNTRY'),
+        ],
+    ],
 
     /**
      * --------------------------------------------------------------------------
-     * Facebook Verification
+     * Facebook Tracking variables
      * --------------------------------------------------------------------------
      */
 
-    'facebook_verification' => env('FACEBOOK_VERIFICATION'),
+    'facebook' => [
+
+        'pixel_id' => env('FACEBOOK_PIXEL_ID'),
+
+        'verification' => env('FACEBOOK_VERIFICATION'),
+    ],
+
+    /**
+     * --------------------------------------------------------------------------
+     * Linkedin Tracking variables
+     * --------------------------------------------------------------------------
+     */
+
+    'linkedin' => [
+        'pixel_id' => env('LINKEDIN_PIXEL_ID'),
+    ],
 
     /*
     |--------------------------------------------------------------------------
@@ -67,4 +90,18 @@ return [
     */
 
     'default_contact_route_name' => env('DEFAULT_CONTACT_ROUTE_NAME', 'website.pages.contact'),
+
+    /*
+    |--------------------------------------------------------------------------
+    | Hubspot
+    |--------------------------------------------------------------------------
+    |
+    | This values will be used for hubspot scripts and forms.
+    */
+    'hubspot' => [
+
+        'portal_id' => env('HUBSPOT_PORTAL_ID', '4423252'),
+
+        'default_form_id' => env('HUBSPOT_DEFAULT_FORM_ID'),
+    ],
 ];
