@@ -7,8 +7,8 @@
 ])
 
 <x-n2p::ui.section class="bg-gradient-call-to-action">
-    <div class="lg:grid gap-12 md:grid-cols-3 lg:gap-4 flex items-center justify-center">
-        <div class="md:col-span-2">
+    <div class="flex flex-col lg:grid gap-12 md:grid-cols-3 lg:gap-4 flex items-center justify-center">
+        <div class="md:col-span-2 text-center md:text-left">
             @isset($subtitle)
                 <p class="mb-2 text-white text-lg">
                     {{ $subtitle }}
@@ -34,7 +34,7 @@
             @endif
         </div>
 
-        <div class="p-4 md:p-8">
+        <div class="p-8">
             <img src="{{ asset($image) }}" alt="{{ $title }}" title="{{ $title }}">
         </div>
     </div>

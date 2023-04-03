@@ -7,11 +7,11 @@
 
 <x-n2p::ui.section>
     <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
-        <div class="relative flex items-center justify-center lg:relative lg:m-0 lg:h-full lg:px-0">
+        <div class="order-2 md:order-1 relative flex items-center justify-center lg:relative lg:m-0 lg:h-full lg:px-0">
             {{ $image }}
         </div>
         
-        <div class="mx-auto max-w-xl flex flex-col justify-center h-full">
+        <div class="order-1 md:order-2 mx-auto max-w-xl flex flex-col justify-center h-full">
             @isset($subtitle)
                 <p class="text-lg text-primary">
                     {{ $subtitle }}
