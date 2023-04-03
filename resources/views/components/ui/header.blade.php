@@ -1,3 +1,16 @@
+@prependOnce('alpinjs')
+<script>
+    document.addEventListener('alpine:init', () => {
+        Alpine.store('mobileMenu', {
+            open: false,
+            toggle() {
+                this.open = ! this.open
+            }
+        })
+    })
+</script>
+@endPrependOnce
+
 <div class="relative shadow bg-white border-b-2 border-gray-100" x-data
     @keydown.escape="$store.mobileMenu.open = false">
 
