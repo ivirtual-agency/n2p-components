@@ -7,6 +7,8 @@ use Illuminate\Support\Facades\Blade;
 use Spatie\LaravelPackageTools\Commands\InstallCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
+use Artesaos\SEOTools\Facades\OpenGraph;
+use Artesaos\SEOTools\Facades\TwitterCard;
 
 class Net2phoneServiceProvider extends PackageServiceProvider
 {
@@ -56,5 +58,11 @@ class Net2phoneServiceProvider extends PackageServiceProvider
             __DIR__ . '/../resources/views/components',
             'n2p'
         );
+
+        OpenGraph::setSiteName(config('app.name'));
+
+        if (!empty(config('net2phone.social.twitter.site'))) {
+            TwitterCard::setSite(config('net2phone.social.twitter.site'));
+        }
     }
 }
