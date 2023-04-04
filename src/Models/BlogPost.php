@@ -44,6 +44,14 @@ class BlogPost extends Model
     }
 
     /**
+     * Check if post should be hide on website.
+     */
+    public function shouldHideOnWebsite(): bool
+    {
+        return is_null($this->publish_at) || now()->isBefore($this->publish_at);
+    }
+
+    /**
      * Which user created the post.
      */
     public function createdBy(): BelongsTo

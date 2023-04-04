@@ -4,6 +4,7 @@ namespace iVirtual\Net2phone\Models\Concerns;
 
 use \Illuminate\Database\Eloquent\Casts\Attribute;
 use Spatie\Sluggable\HasSlug;
+use Artesaos\SEOTools\Facades\SEOTools;
 use Spatie\Sluggable\SlugOptions;
 
 trait HasSeo
@@ -28,6 +29,17 @@ trait HasSeo
         return Attribute::make(
             get: fn ($value) => $value ?? $this->short_description
         );
+    }
+
+    /**
+     * Set SEO for the model.
+     */
+    public function withSEO(): self
+    {
+        SEOTools::setTitle($this->seo_title);
+        SEOTools::setDescription($this->seo_description);
+
+        return $this;
     }
 
     /**
