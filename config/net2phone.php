@@ -89,7 +89,7 @@ return [
     | This value will be used as a default contact route name for the components.
     */
 
-    'default_contact_route_name' => env('DEFAULT_CONTACT_ROUTE_NAME', 'website.pages.contact'),
+    'default_contact_route_name' => 'website.pages.contact',
 
     /*
     |--------------------------------------------------------------------------
@@ -103,5 +103,21 @@ return [
         'portal_id' => env('HUBSPOT_PORTAL_ID', '4423252'),
 
         'default_form_id' => env('HUBSPOT_DEFAULT_FORM_ID'),
+    ],
+
+    /*
+    |--------------------------------------------------------------------------
+    | Blog
+    |--------------------------------------------------------------------------
+    |
+    | This values will be used for the blog.
+    */
+    'blog' => [
+
+        'routes' => [
+            'post' => 'blog.post',
+            'category' => null,
+            'tag' => null,
+        ],
     ],
 ];
