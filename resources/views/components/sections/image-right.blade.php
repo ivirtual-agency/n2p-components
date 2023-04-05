@@ -21,6 +21,8 @@
             <p class="mt-4 text-lg text-gray-500">
                 {{ $text }}
             </p>
+
+            {{ $slot }}
         </div>
 
         <div class="relative flex items-center justify-center lg:relative lg:m-0 lg:h-full lg:px-0">

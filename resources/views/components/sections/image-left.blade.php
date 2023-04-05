@@ -25,6 +25,8 @@
             <p class="mt-4 text-lg text-gray-500">
                 {{ $text }}
             </p>
+
+            {{ $slot }}
         </div>
     </div>
 </x-n2p::ui.section>
