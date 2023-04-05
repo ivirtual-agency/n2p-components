@@ -12,7 +12,7 @@
                                 'text-gray-500 border-gray-100': selected !== {{ $i }}
                             }">
                         <span class="w-full text-left">
-                            {{ ${'item_' . $i}->attributes->get('title') }}
+                            {{ ${'item_' . $i}->attributes->get('menu') }}
                         </span>
                     </button>
                 @endfor
@@ -27,7 +27,7 @@
                         <button type="button" @click="selected = (selected === {{ $i }} ? null : {{ $i }})"
                             class="w-full flex justify-between items-center px-4 py-2 bg-gray-100">
 
-                            <span>{{ ${'item_' . $i}->attributes->get('title') }}</span>
+                            <span>{{ ${'item_' . $i}->attributes->get('menu') }}</span>
 
                             <span x-show="selected !== {{ $i }}">
                                 @svg('entypo-plus', 'w-8 h-8')
