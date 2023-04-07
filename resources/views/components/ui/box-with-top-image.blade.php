@@ -1,4 +1,4 @@
-@props(['image'])
+@props(['image', 'title'])
 
 <div class="relative shadow-xl rounded p-8">
 
