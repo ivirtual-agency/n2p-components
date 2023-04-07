@@ -11,6 +11,17 @@
 </script>
 @endPrependOnce
 
+@pushOnce('scripts')
+    <div x-data x-cloak x-show="$store.mobileMenu.open" 
+        x-transition:enter="ease-out duration-300" 
+        x-transition:enter-start="opacity-0" 
+        x-transition:enter-end="opacity-100" 
+        x-transition:leave="ease-in duration-200" 
+        x-transition:leave-start="opacity-100" 
+        x-transition:leave-end="opacity-0"
+        class="fixed sm:hidden inset-0 bg-gray-500 bg-opacity-75 transition-opacity"></div>
+@endPushOnce
+
 <div class="relative shadow bg-white border-b-2 border-gray-100" x-data
     @keydown.escape="$store.mobileMenu.open = false">
 
@@ -74,7 +85,7 @@
                         </div>
                     </div>
                     <div class="mt-6">
-                        <nav class="grid gap-y-4">
+                        <nav class="grid gap-y-3">
                             {{ $mobileMenu }}
                         </nav>
                     </div>
