@@ -1,4 +1,4 @@
-<section class="bg-secondary">
+<section class="bg-secondary" id="features">
 
     @svg('n2p-secondary-top-divider', 'w-full')
 

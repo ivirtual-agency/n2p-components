@@ -20,7 +20,7 @@
     );
 @endphp
 
-<x-n2p::ui.section class="bg-gradient-to-white">
+<x-n2p::ui.section id="faqs" class="bg-gradient-to-white">
 
     <h2 class="text-center text-xl font-bold tracking-tight text-secondary md:text-3xl lg:text-4xl">
         @lang('FAQs')

@@ -3,7 +3,7 @@
     'subtitle',
 ])
 
-<x-n2p::ui.section>
+<x-n2p::ui.section {{ $attributes }}>
     <div class="text-center">
 
         <h2 class="max-w-6xl mx-auto text-xl font-bold tracking-tight sm:text-3xl md:text-4xl">

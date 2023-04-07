@@ -6,7 +6,7 @@
     'divider' => true
 ])
 
-<section class="relative bg-header">
+<section {{ $attributes->merge(['class' => 'relative bg-header']) }}>
     <div class="mt-10 md:mt-12 lg:mt-16 xl:mt-24 py-8 sm:py-16">
         <div class="mx-auto max-w-7xl">
             <div class="lg:grid lg:grid-cols-12 lg:gap-8">

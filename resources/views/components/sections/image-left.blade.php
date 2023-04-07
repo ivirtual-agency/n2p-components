@@ -5,7 +5,7 @@
     'image'
 ])
 
-<x-n2p::ui.section>
+<x-n2p::ui.section {{ $attributes }}>
     <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
         <div class="order-2 md:order-1 relative flex items-center justify-center lg:relative lg:m-0 lg:h-full lg:px-0">
             {{ $image }}

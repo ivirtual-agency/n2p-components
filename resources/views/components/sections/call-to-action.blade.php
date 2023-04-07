@@ -6,7 +6,7 @@
     'subtitle',
 ])
 
-<x-n2p::ui.section class="bg-gradient-call-to-action">
+<x-n2p::ui.section id="call-to-action" class="bg-gradient-call-to-action">
     <div class="flex flex-col lg:grid gap-12 md:grid-cols-3 lg:gap-4 flex items-center justify-center">
         <div class="md:col-span-2 text-center md:text-left">
             @isset($subtitle)
