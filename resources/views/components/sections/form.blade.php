@@ -2,7 +2,7 @@
 
 <x-n2p::ui.section id="contact">
     <div class="grid grid-cols-1 lg:grid-cols-3 rounded-xl shadow-xl">
-        <div class="py-10 px-6 sm:px-10 xl:p-12 bg-contact rounded-l-xl">
+        <div class="py-10 px-6 sm:px-10 xl:p-12 bg-contact rounded-t-xl md:rounded-tr-none md:rounded-l-xl">
 
             <h3 class="text-lg font-medium text-white">
                 @lang('Contact us')
@@ -15,7 +15,7 @@
             </div>
         </div>
 
-        <div class="py-10 px-6 sm:px-10 lg:col-span-2 xl:p-12 rounded-r-xl {{ $bg }}">
+        <div class="py-10 px-6 sm:px-10 lg:col-span-2 xl:p-12 rounded-b-xl md:rounded-bl-none md:rounded-r-xl {{ $bg }}">
             @isset($form)
                 {{ $form }}
             @else
