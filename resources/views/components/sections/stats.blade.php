@@ -12,7 +12,7 @@
 
         <div class="w-full sm:w-3/5 flex flex-col sm:flex-row space-x-0 sm:space-x-4 space-y-4 sm:space-y-0">
             @foreach ($items as $item)
-                <div class="text-secondary">
+                <div class="flex-1 text-secondary">
                     <div class="flex justify-center sm:justify-start mt-4 sm:mt-0">
                         <span class="text-6xl">
                             {{ $item['number'] }}

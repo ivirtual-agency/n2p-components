@@ -1,4 +1,4 @@
-@props(['bg' => 'bg-white'])
+@props(['bg' => 'bg-gray-50'])
 
 <x-n2p::ui.section id="contact">
     <div class="grid grid-cols-1 lg:grid-cols-3 rounded-xl shadow-xl">

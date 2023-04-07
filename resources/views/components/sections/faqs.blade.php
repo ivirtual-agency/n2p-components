@@ -50,7 +50,7 @@
 
                 <div x-show="expanded" x-collapse>
                     <div class="px-6 pb-4">
-                        {{ $answer['answer'] }}
+                        {!! $answer['answer'] !!}
                     </div>
                 </div>
             </div>

@@ -25,6 +25,8 @@
                 {{ $text }}
             </p>
 
+            {{ $slot }}
+
             @if ($button)
                 <a href="{{ route($route ?? config('net2phone.default_contact_route_name')) }}">
                     <x-n2p::ui.button-inverted class="mt-8">
