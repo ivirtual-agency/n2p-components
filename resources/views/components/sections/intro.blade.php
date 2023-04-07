@@ -42,7 +42,7 @@
                     <div class="mt-16 sm:mt-24 lg:col-span-4 lg:mt-0">
                         <div class="sm:mx-auto sm:w-full sm:max-w-md sm:overflow-hidden sm:rounded-lg">
                             <div class="p-8">
-                                <img src="{{ asset($image) }}" alt="net2phone - {{ $title }}" title="net2phone - {{ $title }}">
+                                <img src="{{ asset($image) }}" loading="lazy" alt="net2phone - {{ $title }}" title="net2phone - {{ $title }}">
                             </div>
                         </div>
                     </div>

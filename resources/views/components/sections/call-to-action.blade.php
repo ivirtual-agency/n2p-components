@@ -37,7 +37,7 @@
         </div>
 
         <div class="p-8">
-            <img src="{{ asset($image) }}" alt="{{ $title }}" title="{{ $title }}">
+            <img src="{{ asset($image) }}" alt="{{ $title }}" title="{{ $title }}" loading="lazy">
         </div>
     </div>
 </x-n2p::ui.section>
