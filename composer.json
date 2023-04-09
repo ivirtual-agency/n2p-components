@@ -1,11 +1,11 @@
 {
-    "name": "ivirtual/net2phone",
+    "name": "ivirtual/net2phone-components",
     "description": "Net2phone components package for web development.",
     "keywords": [
         "ivirtual",
         "net2phone"
     ],
-    "homepage": "https://bitbucket.com/ivirtual-la/net2phone",
+    "homepage": "https://bitbucket.com/ivirtual-la/net2phone-components",
     "license": "MIT",
     "authors": [
         {
@@ -17,9 +17,11 @@
     "require": {
         "php": "^8.1",
         "artesaos/seotools": "^1.1",
-        "htmlmin/htmlmin": "dev-master#347d577",
+        "blade-ui-kit/blade-icons": "^1.5",
         "illuminate/contracts": "^10.0",
-        "spatie/laravel-package-tools": "^1.14.0"
+        "owenvoke/blade-entypo": "^2.1",
+        "spatie/laravel-package-tools": "^1.14.0",
+        "spatie/laravel-sluggable": "^3.4"
     },
     "require-dev": {
         "laravel/pint": "^1.0",
