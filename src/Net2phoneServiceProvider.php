@@ -25,8 +25,6 @@ class Net2phoneServiceProvider extends PackageServiceProvider
             ->hasViews()
             ->hasAssets()
             ->hasTranslations()
-            ->hasMigrations('2023_01_03_000000_create_blog_tables')
-            ->runsMigrations()
             ->hasViewComposer('*', fn ($view) => $view->with(
                 'internationalSites',
                 Net2phone::getInternationalWebsites()
