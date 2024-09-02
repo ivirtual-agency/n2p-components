@@ -7,9 +7,9 @@ This is the package to develop net2phone websites.
 You can install the package via composer:
 
 ```bash
-composer config repositories.net2phone '{"type": "vcs", "url": "https://bitbucket.org/ivirtual-la/net2phone-components"}' --file composer.json
+composer config repositories.net2phone '{"type": "vcs", "url": "https://github.com/ivirtual-agency/n2p-components"}' --file composer.json
 
-composer require ivirtual/net2phone-components
+composer require ivirtual-agency/n2p-components
 ```
 
 Install the package:
