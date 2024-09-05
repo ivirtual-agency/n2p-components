@@ -7,7 +7,7 @@
 ])
 
 <section {{ $attributes->merge(['class' => 'relative bg-header']) }}>
-    <div class="mt-10 md:mt-12 lg:mt-16 xl:mt-24 py-8 sm:py-16">
+    <div class="mt-4 md:mt-6 lg:mt-8 xl:mt-16 py-6 sm:py-12">
         <div class="mx-auto max-w-7xl">
             <div class="lg:grid lg:grid-cols-12 lg:gap-8">
                 @isset ($image)
